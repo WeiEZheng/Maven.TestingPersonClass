@@ -4,8 +4,8 @@ package com.zipcodewilmington.person;
  * Created by leon on 2/12/18.
  */
 public class Person {
-    private String name;
-    private int age;
+    private String name, address,email,birthMonth,phoneNumber;
+    private int age,birthDay;
 
     public Person() {
         this("",Integer.MAX_VALUE);
@@ -32,6 +32,26 @@ public class Person {
         this.age=age;
     }
 
+    public void setAddress (String address){
+        this.address=address;
+    }
+
+    public void setEmail (String email){
+        this.email=email;
+    }
+
+    public void setBirthMonth (String month){
+        this.birthMonth=month;
+    }
+
+    public void setPhoneNumber (String phoneNumber){
+        this.phoneNumber=phoneNumber;
+    }
+
+    public void setBirthDay (int birthDay){
+        this.birthDay=birthDay;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -39,4 +59,12 @@ public class Person {
     public Integer getAge() {
         return this.age;
     }
+
+    public String getAddress() {return this.address;}
+
+    public String getEmail() {return this.email;}
+
+    public String getBirthMonth () {return this.birthMonth;}
+
+    public int getBirthDay() {return this.birthDay;}
 }
