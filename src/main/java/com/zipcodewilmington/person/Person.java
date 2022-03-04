@@ -1,5 +1,7 @@
 package com.zipcodewilmington.person;
 
+import javafx.beans.binding.StringBinding;
+
 /**
  * Created by leon on 2/12/18.
  */
@@ -22,6 +24,17 @@ public class Person {
     public Person(String name, int age) {
         setName(name);
         setAge(age);
+    }
+
+    public Person(String name, int age, String address,
+                  String email, String birthMonth, int birthDay, String phoneNumber){
+        setName(name);
+        setAge(age);
+        setAddress(address);
+        setEmail(email);
+        setBirthMonth(birthMonth);
+        setBirthDay(birthDay);
+        setPhoneNumber(phoneNumber);
     }
 
     public void setName(String name) {
@@ -53,18 +66,20 @@ public class Person {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public Integer getAge() {
-        return this.age;
+        return age;
     }
 
-    public String getAddress() {return this.address;}
+    public String getAddress() {return address;}
 
-    public String getEmail() {return this.email;}
+    public String getEmail() {return email;}
 
-    public String getBirthMonth () {return this.birthMonth;}
+    public String getBirthMonth () {return birthMonth;}
 
-    public int getBirthDay() {return this.birthDay;}
+    public int getBirthDay() {return birthDay;}
+
+    public String getPhoneNumber() {return phoneNumber;}
 }

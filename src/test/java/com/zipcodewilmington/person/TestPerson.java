@@ -95,4 +95,31 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testAll(){
+        // Given
+        Integer expectedAge = 5,expectedBirthDay=15;
+        String expectedName = "Leon", expectedAddress="111 some st somecity, somestate",
+                expectedEmail = "someemail@gmail.com", expectedBirthMonth="Jan",
+                expectedPhoneNumber="2225556666";
+
+        // When
+        Person person = new Person(expectedName, expectedAge,expectedAddress, expectedEmail,
+                expectedBirthMonth,expectedBirthDay,expectedPhoneNumber);
+
+        // Then
+        Integer actualAge = person.getAge(), actualBirthDay = person.getBirthDay();
+        String actualName = person.getName(), actualAddress = person.getAddress(),
+                actualEmail = person.getEmail(),actualBirthMonth = person.getBirthMonth(),
+                actualPhoneNumber = person.getPhoneNumber();
+
+        Assert.assertEquals(expectedAge, actualAge);
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(expectedAddress,actualAddress);
+        Assert.assertEquals(expectedEmail,actualEmail);
+        Assert.assertEquals(expectedBirthMonth,actualBirthMonth);
+        Assert.assertEquals(expectedBirthDay,actualBirthDay);
+        Assert.assertEquals(expectedPhoneNumber,actualPhoneNumber);
+    }
 }
