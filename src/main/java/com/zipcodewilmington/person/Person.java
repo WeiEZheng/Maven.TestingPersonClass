@@ -9,9 +9,7 @@ public class Person {
     private String name, address,email,birthMonth,phoneNumber;
     private int age,birthDay;
 
-    public Person() {
-        this("",Integer.MAX_VALUE);
-    }
+    public Person() {this("",Integer.MAX_VALUE);}
 
     public Person(int age) {
         this("",age);
